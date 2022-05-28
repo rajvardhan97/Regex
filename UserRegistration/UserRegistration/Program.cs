@@ -14,6 +14,10 @@ namespace UserRegistration
             Console.WriteLine("Enter the First Name");
             string fName = Console.ReadLine();
             registration.checkfirstname(fName);
+
+            Console.WriteLine("Enter the Last Name");
+            string lName = Console.ReadLine();
+            registration.checklastname(lName);
         }
     }
 }
