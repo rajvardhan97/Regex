@@ -23,6 +23,9 @@ namespace UserRegistration
             string Email = Console.ReadLine();
             registration.checkEmail(Email);
 
+            Console.WriteLine("Enter Mobile Number");
+            string mobile = Console.ReadLine();
+            registration.checkMobile(mobile);
         }
     }
 }
