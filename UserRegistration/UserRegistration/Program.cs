@@ -18,6 +18,11 @@ namespace UserRegistration
             Console.WriteLine("Enter the Last Name");
             string lName = Console.ReadLine();
             registration.checklastname(lName);
+
+            Console.WriteLine("Enter the Email Address");
+            string Email = Console.ReadLine();
+            registration.checkEmail(Email);
+
         }
     }
 }
