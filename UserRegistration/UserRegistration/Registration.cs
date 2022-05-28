@@ -13,7 +13,7 @@ namespace UserRegistration
         public string LastName = "^[A-Z]{1}[a-zA-Z]{2,}$";
         public string EmailAddress = "^[a-zA-Z0-9_\\-\\.]+[@][a-z]+[\\.]([a-z]{2,3})([\\.]?[a-z]*)$";
         public string Mobile = "^[0-9]{2}\\s[6-9]{1}[0-9]{9}$";
-        public string Password = "^[A-Z]+[A-Za-z0-9\\._\\-\\+=@#&\\*]{8,}$";
+        public string Password = "^(?=.*?[A-Za-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
         public void checkfirstname(string Firstname)
         {
