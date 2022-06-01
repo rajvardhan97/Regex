@@ -13,28 +13,23 @@ namespace UserRegistration
             Registration registration = new Registration();
             Console.WriteLine("Enter the First Name");
             string fName = Console.ReadLine();
-            registration.checkfirstname(fName);
-            Console.Write(registration.checkfirstname(fName));
+            Console.Write(registration.checkfirstname(fName) + "\n");
 
             Console.WriteLine("Enter the Last Name");
             string lName = Console.ReadLine();
-            registration.checklastname(lName);
-            Console.Write(registration.checklastname(lName));
+            Console.Write(registration.checklastname(lName) + "\n");
 
             Console.WriteLine("Enter the Email Address");
             string Email = Console.ReadLine();
-            registration.checkEmail(Email);
-            Console.Write(registration.checkEmail(Email));
+            Console.Write(registration.checkEmail(Email) + "\n");
 
             Console.WriteLine("Enter Mobile Number");
             string mobile = Console.ReadLine();
-            registration.checkMobile(mobile);
-            Console.Write(registration.checkMobile(mobile));
+            Console.Write(registration.checkMobile(mobile) + "\n");
 
             Console.WriteLine("Enter the Password");
             string password = Console.ReadLine();
-            registration.checkPassword(password);
-            Console.Write(registration.checkPassword(password));
+            Console.Write(registration.checkPassword(password) + "\n");
         }
     }
 }
