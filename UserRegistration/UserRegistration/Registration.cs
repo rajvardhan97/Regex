@@ -14,121 +14,78 @@ namespace UserRegistration
         public string EmailAddress = "^[a-zA-Z0-9_\\-\\.]+[@][a-z]+[\\.]([a-z]{2,3})([\\.]?[a-z]*)$";
         public string Mobile = "^[0-9]{2}\\s[6-9]{1}[0-9]{9}$";
         public string Password = "^(?=.*[A-Za-z])(?=.*[a-z])(?=.*[0-9])(?=.*[#?!@$%^&*-.+=_]).{8,}$";
+        public string SampleEmail = "^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
 
-        public string checkfirstname(string Firstname)
+        public void checkfirstname(string Firstname)
         {
             Regex Regex = new Regex(FirstName);
-            try
+            if (Regex.IsMatch(Firstname))
             {
-                if(Regex.Equals(""))
-                {
-                    throw new CustomException(CustomException.ExceptionType.EMPTY_MESSAGE, "First Name cannot be empty");
-                }
-                else if (Regex.IsMatch(Firstname))
-                {
-                    return "First Name is valid";
-                }
-                else
-                {
-                    return "First Name is Invalid";
-                }
+                Console.WriteLine("First Name is valid");
             }
-            catch(NullReferenceException)
+            else
             {
-                throw new CustomException(CustomException.ExceptionType.NULL_MESSAGE, "First Name cannot be Null");
+                Console.WriteLine("First Name is Invalid");
             }
         }
-        public string checklastname(string Lastname)
+        public void checklastname(string Lastname)
         {
             Regex regex = new Regex(LastName);
-            try
+            if (regex.IsMatch(Lastname))
             {
-                if(regex.Equals(""))
-                {
-                    throw new CustomException(CustomException.ExceptionType.EMPTY_MESSAGE, "Last Name cannot be Empty");
-                }
-                else if (regex.IsMatch(Lastname))
-                {
-                    return "Last Name is valid";
-                }
-                else
-                {
-                    return "Last Name is Invalid";
-                }
+                Console.WriteLine("Last Name is valid");
             }
-            catch(NullReferenceException)
+            else
             {
-                throw new CustomException(CustomException.ExceptionType.NULL_MESSAGE, "Last Name cannot be Null");
+                Console.WriteLine("Last Name is Invalid");
             }
-            
         }
-        public string checkEmail(string EmailID)
+        public void checkEmail(string EmailID)
         {
             Regex regex = new Regex(EmailAddress);
-            try
+            if (regex.IsMatch(EmailID))
             {
-                if (regex.Equals(""))
-                {
-                    throw new CustomException(CustomException.ExceptionType.EMPTY_MESSAGE, "Email Id cannot be Empty");
-                }
-                else if (regex.IsMatch(EmailID))
-                {
-                    return "Email is valid";
-                }
-                else
-                {
-                    return "Email is Invalid";
-                }
+                Console.WriteLine("Email is valid");
             }
-            catch(NullReferenceException)
+            else
             {
-                throw new CustomException(CustomException.ExceptionType.NULL_MESSAGE, "Email Id cannot be Null")l
+                Console.WriteLine("Email is Invalid");
             }
         }
-        public string checkMobile(string MobNumber)
+        public void checkMobile(string MobNumber)
         {
             Regex regex = new Regex(Mobile);
-            try
+            if (regex.IsMatch(MobNumber))
             {
-                if (regex.Equals(""))
-                {
-                    throw new CustomException(CustomException.ExceptionType.EMPTY_MESSAGE, "Mobile Number cannot be Empty");
-                }
-                else if (regex.IsMatch(MobNumber))
-                {
-                    return "Mobile Number is valid";
-                }
-                else
-                {
-                    return "Mobile Number is Invalid";
-                }
+                Console.WriteLine("Mobile Number is valid");
             }
-            catch(NullReferenceException)
+            else
             {
-                throw new CustomException(CustomException.ExceptionType.NULL_MESSAGE, "Mobile number cannot be Null");
+                Console.WriteLine("Mobile Number is Invalid");
             }
         }
-        public string checkPassword(string password)
+        public void checkPassword(string password)
         {
             Regex regex = new Regex(Password);
-            try
+            if (regex.IsMatch(password))
             {
-                if (regex.Equals(""))
-                {
-                    throw new CustomException(CustomException.ExceptionType.EMPTY_MESSAGE, "Password cannot be Empty");
-                }
-                else if (regex.IsMatch(password))
-                {
-                    return "Password is valid";
-                }
-                else
-                {
-                    return "Password is Invalid";
-                }
+                Console.WriteLine("Password is valid");
             }
-            catch(NullReferenceException)
+            else
             {
-                throw new CustomException(CustomException.ExceptionType.NULL_MESSAGE, "Password cannot be Null");
+                Console.WriteLine("Password is Invalid");
+            }
+        }
+        public void SampleEmails(string sample)
+        {
+            Regex regex = new Regex(SampleEmail);
+            if(regex.IsMatch(sample))
+            {
+                Console.WriteLine("Email Correct");
+            }
+            else
+            {
+                Console.WriteLine("Email is incorrect");
             }
         }
     }
