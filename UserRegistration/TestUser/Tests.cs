@@ -61,5 +61,15 @@ namespace UserRegistration
 
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void SampleEmail()
+        {
+            string email = "abc-100@gmail.com";
+            string expected = "Email Correct";
+            
+            string actual = registration.SampleEmails(email);
+            
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
