@@ -21,5 +21,55 @@ namespace UserRegistration
 
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void ValidLastName()
+        {
+            string LastName = "Singh";
+            string expected = "Last Name is valid";
+
+            string actual = registration.checklastname(LastName);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ValidEmail()
+        {
+            string Email = "rajvardhan.26@gmail.com";
+            string expected = "Email is valid";
+
+            string actual = registration.checkEmail(Email);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ValidNumber()
+        {
+            string Mobile = "91 8439560765";
+            string expected = "Mobile Number is valid";
+
+            string actual = registration.checkMobile(Mobile);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ValidPassword()
+        {
+            string Password = "Hello$12a";
+            string expected = "Password is valid";
+
+            string actual = registration.checkPassword(Password);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void SampleEmail()
+        {
+            string email = "abc-100@gmail.com";
+            string expected = "Email Correct";
+
+            string actual = registration.SampleEmails(email);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
